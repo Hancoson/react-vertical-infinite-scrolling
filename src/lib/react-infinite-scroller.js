@@ -3,16 +3,14 @@
  * @Date: 2018-05-03 15:56:31 
  * @version 0.0.1 
  */
-'use strict';
-
 Object.defineProperty(exports, '__esModule', {
   value: true,
 });
 
-var _createClass = (function () {
+const _createClass = (function () {
   function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
+    for (let i = 0; i < props.length; i++) {
+      let descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
       if ('value' in descriptor) descriptor.writable = true;
@@ -26,21 +24,21 @@ var _createClass = (function () {
   };
 })();
 
-var _react = require('react');
+const _react = require('react');
 
-var _react2 = _interopRequireDefault(_react);
+const _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
+const _propTypes = require('prop-types');
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+const _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
 function _objectWithoutProperties(obj, keys) {
-  var target = {};
-  for (var i in obj) {
+  let target = {};
+  for (let i in obj) {
     if (keys.indexOf(i) >= 0) continue;
     if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
     target[i] = obj[i];
@@ -86,15 +84,15 @@ function _inherits(subClass, superClass) {
       : (subClass.__proto__ = superClass);
 }
 
-var InfiniteScroll = (function (_Component) {
-  _inherits(InfiniteScroll, _Component);
+const ReactInfinitScroller = (function (_Component) {
+  _inherits(ReactInfinitScroller, _Component);
 
-  function InfiniteScroll(props) {
-    _classCallCheck(this, InfiniteScroll);
+  function ReactInfinitScroller(props) {
+    _classCallCheck(this, ReactInfinitScroller);
 
-    var _this = _possibleConstructorReturn(
+    const _this = _possibleConstructorReturn(
       this,
-      (InfiniteScroll.__proto__ || Object.getPrototypeOf(InfiniteScroll)).call(
+      (ReactInfinitScroller.__proto__ || Object.getPrototypeOf(ReactInfinitScroller)).call(
         this,
         props,
       ),
@@ -104,7 +102,7 @@ var InfiniteScroll = (function (_Component) {
     return _this;
   }
 
-  _createClass(InfiniteScroll, [
+  _createClass(ReactInfinitScroller, [
     {
       key: 'componentDidMount',
       value: function componentDidMount() {
@@ -125,7 +123,7 @@ var InfiniteScroll = (function (_Component) {
         this.detachMousewheelListener();
       },
 
-      // Set a defaut loader for all your `InfiniteScroll` components
+      // Set a defaut loader for all your `ReactInfinitScroller` components
     },
     {
       key: 'setDefaultLoader',
@@ -136,7 +134,7 @@ var InfiniteScroll = (function (_Component) {
     {
       key: 'detachMousewheelListener',
       value: function detachMousewheelListener() {
-        var scrollEl = window;
+        let scrollEl = window;
         if (this.props.useWindow === false) {
           scrollEl = this.scrollComponent.parentNode;
         }
@@ -151,7 +149,7 @@ var InfiniteScroll = (function (_Component) {
     {
       key: 'detachScrollListener',
       value: function detachScrollListener() {
-        var scrollEl = window;
+        let scrollEl = window;
         if (this.props.useWindow === false) {
           scrollEl = this.scrollComponent.parentNode;
         }
@@ -175,7 +173,7 @@ var InfiniteScroll = (function (_Component) {
           return;
         }
 
-        var scrollEl = window;
+        let scrollEl = window;
         if (this.props.useWindow === false) {
           scrollEl = this.scrollComponent.parentNode;
         }
@@ -214,16 +212,16 @@ var InfiniteScroll = (function (_Component) {
     {
       key: 'scrollListener',
       value: function scrollListener() {
-        var el = this.scrollComponent;
-        var scrollEl = window;
+        const el = this.scrollComponent;
+        let scrollEl = window;
 
-        var offset = void 0;
+        let offset = void 0;
         if (this.props.useWindow) {
-          var doc =
+          const doc =
             document.documentElement ||
             document.body.parentNode ||
             document.body;
-          var scrollTop =
+          const scrollTop =
             scrollEl.pageYOffset !== undefined
               ? scrollEl.pageYOffset
               : doc.scrollTop;
@@ -264,9 +262,9 @@ var InfiniteScroll = (function (_Component) {
     {
       key: 'render',
       value: function render() {
-        var _this2 = this;
+        const _this2 = this;
 
-        var _props = this.props,
+        const _props = this.props,
           children = _props.children,
           element = _props.element,
           hasMore = _props.hasMore,
@@ -301,7 +299,7 @@ var InfiniteScroll = (function (_Component) {
           }
         };
 
-        var childrenArray = [children];
+        const childrenArray = [children];
         if (hasMore) {
           if (loader) {
             isReverse
@@ -318,10 +316,10 @@ var InfiniteScroll = (function (_Component) {
     },
   ]);
 
-  return InfiniteScroll;
+  return ReactInfinitScroller;
 })(_react.Component);
 
-InfiniteScroll.propTypes = {
+ReactInfinitScroller.propTypes = {
   children: _propTypes2.default.node.isRequired,
   element: _propTypes2.default.string,
   hasMore: _propTypes2.default.bool,
@@ -335,7 +333,7 @@ InfiniteScroll.propTypes = {
   useCapture: _propTypes2.default.bool,
   useWindow: _propTypes2.default.bool,
 };
-InfiniteScroll.defaultProps = {
+ReactInfinitScroller.defaultProps = {
   element: 'div',
   hasMore: false,
   initialLoad: true,
@@ -347,5 +345,5 @@ InfiniteScroll.defaultProps = {
   useCapture: false,
   loader: null,
 };
-exports.default = InfiniteScroll;
+exports.default = ReactInfinitScroller;
 module.exports = exports['default'];
