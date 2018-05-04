@@ -12,14 +12,57 @@ class App extends Component {
     }
   }
   loadItems(page) {
-    const that = this;
 
-    fetch('/api/a').then(res =>
+    this.setState({
+      tracks: [{
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }, {
+        "url": "http://aaa.aa",
+        "img": "http://aaa.aa",
+        "title": "hahahah",
+      }]
+    })
+
+    /* fetch('/api/a').then(res =>
       console.log(res)
       //res.json()
     ).then(data =>
       console.log(data)
-    )
+    ) */
   }
 
   render() {
@@ -30,8 +73,8 @@ class App extends Component {
     tracks.map((val, i) => {
       items.push(
         <div className="track" key={val.id}>
-          <a href={val.permalink_url} target="_blank">
-            <img src={val.artwork_url} width="150" height="150" />
+          <a href={val.url} target="_blank">
+            <img src={val.img} width="150" height="150" />
             <p className="title">{val.title}</p>
           </a>
         </div>
@@ -44,7 +87,7 @@ class App extends Component {
         </header>
         <ReactInfinitScroller
           pageStart={0}
-          loadMore={() => this.loadItems()}
+          loadMore={(e) => this.loadItems(e)}
           hasMore={hasMoreItems}
           loader={loader}>
 
