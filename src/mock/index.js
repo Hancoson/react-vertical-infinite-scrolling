@@ -1,11 +1,11 @@
 /**
  * @Author: Guoxing.han 
- * @Date: 2018-05-03 17:09:14 
+ * @Date: 2018-05-04 10:26:12 
  * @version 0.0.1 
  */
 import Mock from 'mockjs';
 
-export default Mock.mock('/api.json', {
+export default Mock.mock('/api/a', {
   "success": true, // 是否成功
   "errorMsg": "失败时的错误信息", // 失败时的错误信息
   "errorCode": null, //失败时的错误码

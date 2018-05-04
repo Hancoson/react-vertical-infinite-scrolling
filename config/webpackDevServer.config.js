@@ -6,6 +6,8 @@ const ignoredFiles = require('react-dev-utils/ignoredFiles');
 const config = require('./webpack.config.dev');
 const paths = require('./paths');
 const express = require('express');
+const path = require('path');
+const Mock = require('mockjs');
 
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || '0.0.0.0';
@@ -93,7 +95,33 @@ module.exports = function (proxy, allowedHost) {
       app.use(noopServiceWorkerMiddleware());
 
       //mock
-      app.use(paths.mockJs, express.static('./api'))
+      //app.use(paths.mockJs, express.static('./api'))
+      app.use(express.static(path.join(__dirname, 'src')))
+      app.use('/api/data', (req, res) => {
+        Mock.mock({
+          "success": true, // 是否成功
+          "errorMsg": "失败时的错误信息", // 失败时的错误信息
+          "errorCode": null, //失败时的错误码
+          'data': {
+            'list|10': [
+              {
+                'id|+1': 1,
+                'name|1-5': '@cname',
+                'updataTime|1000-5000': 1000,
+                'img': '@image',
+                'imgRetina': '@image',
+                'href': '@url',
+                'color': '@color',
+                'useHtml|0-1': 1,
+                'html|+1': '<p>' + 1 + '</p>',
+                'status|1-2': 1
+              }
+            ]
+          }
+
+        });
+        res.json(Mock)
+      })
     },
   };
 };

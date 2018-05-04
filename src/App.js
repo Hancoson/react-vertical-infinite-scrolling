@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReactInfinitScroller from './lib/react-infinite-scroller'
+require('./mock/index')
 
 class App extends Component {
   constructor(props) {
@@ -13,12 +14,12 @@ class App extends Component {
   loadItems(page) {
     const that = this;
 
-    fetch('/api.json').then((res) => {
+    fetch('/api/a').then(res =>
       console.log(res)
-    })
-
-
-
+      //res.json()
+    ).then(data =>
+      console.log(data)
+    )
   }
 
   render() {
