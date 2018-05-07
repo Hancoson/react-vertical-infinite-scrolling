@@ -1,1 +1,1 @@
-# React-infinite-scroller
+# React-vertical-infinite-scrolling

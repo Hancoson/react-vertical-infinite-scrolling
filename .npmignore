@@ -6,6 +6,10 @@
 /config
 /scripts
 yarn.lock
+package.json
+
+src/mock
+
 
 # testing
 /coverage
