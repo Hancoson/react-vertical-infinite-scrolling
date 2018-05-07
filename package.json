@@ -1,9 +1,8 @@
 {
-  "name": "react-infinite-scroller",
+  "name": "react-vertical-infinite-scrolling",
   "version": "0.1.0",
   "description": "A node app demo",
   "author": "hancoson#163.com",
-  "private": true,
   "license": "MIT",
   "main": "/lib/index.js",
   "dependencies": {
