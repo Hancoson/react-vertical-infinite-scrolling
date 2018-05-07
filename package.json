@@ -1,10 +1,21 @@
 {
   "name": "react-vertical-infinite-scrolling",
-  "version": "0.1.3",
-  "description": "A node app demo",
+  "version": "0.1.4",
+  "description": "An infinite scroll plugin for React.js",
   "author": "hancoson#163.com",
   "license": "MIT",
   "main": "/lib/index.js",
+  "keywords": [
+    "React",
+    "react components",
+    "infinite loading",
+    "infinite scroll",
+    "react infinite"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hancoson/react-vertical-infinite-scrolling.git"
+  },
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
