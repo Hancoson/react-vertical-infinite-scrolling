@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactInfinitScroller from './lib/react-infinite-scroller'
+import ReactInfinitScroller from './lib/react-vertical-infinite-scrolling'
 
 class App extends Component {
   constructor(props) {
@@ -99,7 +99,6 @@ class App extends Component {
             hasMore={hasMoreItems}
             loader={loader}
             threshold={100}
-          //useCapture={true}
           >
 
             <div className="row">
