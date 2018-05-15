@@ -7,8 +7,13 @@
 /scripts
 yarn.lock
 package.json
+*.json
 
 src/mock
+src/registerServiceWorker.js
+src/App.js
+src/App.test.js
+src/index.css
 
 
 # testing

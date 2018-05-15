@@ -1,6 +1,6 @@
 {
   "name": "react-vertical-infinite-scrolling",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "An infinite scroll plugin for React.js",
   "author": "hancoson#163.com",
   "license": "MIT",
