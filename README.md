@@ -16,7 +16,7 @@ An infinite scroll plugin for React.js
 
 # React-vertical-infinite-scrolling
 
-- [Demo](https://hancoson.github.io/react-vertical-infinite-scrolling/build/index.html)
+- [Demo](https://hancoson.github.io/react-vertical-infinite-scrolling/dist)
 
 ## Intro
 
