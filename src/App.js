@@ -83,6 +83,12 @@ class App extends Component {
           <h1>React Vertical Infinite Scrolling</h1>
           <h4>An infinite scroll plugin for React.js</h4>
 
+          <p>
+            <img src='https://img.shields.io/npm/dt/react-vertical-infinite-scrolling/total.svg' />
+            <img src='https://img.shields.io/github/stars/Hancoson/react-vertical-infinite-scrolling.svg' />
+            <img src='https://img.shields.io/github/license/Hancoson/react-vertical-infinite-scrolling.svg' />
+          </p>
+
           <a href="https://github.com/Hancoson/react-vertical-infinite-scrolling" target="_blank" className="github-corner">
             <svg width="80" height="80" viewBox="0 0 250 250" style={{ fill: '#333', color: '#fff', position: 'absolute', top: '0', border: '0', right: '0', zIndex: '999' }} aria-hidden="true">
               <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>

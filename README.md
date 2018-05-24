@@ -8,6 +8,7 @@ An infinite scroll plugin for React.js
 </p>
 <p align="center">
 
+[![GitHub license](https://img.shields.io/github/license/Hancoson/react-vertical-infinite-scrolling.svg)](https://github.com/Hancoson/react-vertical-infinite-scrolling/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react-vertical-infinite-scrolling.svg)](https://www.npmjs.com/package/react-vertical-infinite-scrolling)
 [![GitHub license](https://img.shields.io/github/license/Hancoson/react-vertical-infinite-scrolling.svg)](https://github.com/Hancoson/react-vertical-infinite-scrolling/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/dt/react-vertical-infinite-scrolling.svg)](https://www.npmjs.com/package/react-vertical-infinite-scrolling)
