@@ -26,13 +26,13 @@ This plugin is an infinite scroll plugin for React.js, it can help you create an
 ## Installation
 
 ```sh
-npm i react-ivertical-infinite-scrolling --save
+npm i react-vertical-infinite-scrolling --save
 ```
 
 or
 
 ```sh
-yarn add react-ivertical-infinite-scrolling
+yarn add react-vertical-infinite-scrolling
 ```
 
 ## Usage & Guide
