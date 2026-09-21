@@ -181,7 +181,10 @@ const ReactInfinitScroller = (function (_Component) {
         scrollEl.addEventListener(
           'mousewheel',
           this.mousewheelListener,
-          this.props.useCapture,
+          {
+            passive: false,
+            capture: this.props.useCapture,
+          },
         );
         scrollEl.addEventListener(
           'scroll',
